@@ -1,0 +1,11 @@
+<h1> Post a Link </h1>
+<p><% link_to 'New Link', new_link_path%></p>
+<%= form_for @links do |l| %>
+  <%= l.label :title %>:
+  <%= l.text_field :title %>
+
+  <%= l.label :url %>
+  <%= l.text_field :url %>
+
+  <%= f.submit %>
+<% end %>

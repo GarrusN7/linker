@@ -1,0 +1,9 @@
+<h1> Links </h1>
+<p><%= link_to 'New link', new_link_path %></p>
+<% @links.each do |link| %>
+  <h2><%= link.title %></h2>
+  <h3><%= link.url %></h2>
+  <%= link_to 'Show link', link_path(link) %>
+  <%= link_to 'Edit link', edit_link_path(link) %>
+  <%= link_to 'Delete link', link, method: :delete %>
+<% end %>
