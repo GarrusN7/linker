@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20150318165811) do
   create_table "links", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
-    t.integer  "votes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "votes",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

@@ -1,9 +1,20 @@
-<h1> Links </h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1> Welcome to Linker </h1>
+    <p>Post a link.</p>
+    <%= link_to "Submit a Link", new_link_path %>
+  </div>
+</div>
+<div>
 <p><%= link_to 'New link', new_link_path %></p>
 <% @links.each do |link| %>
   <h2><%= link.title %></h2>
   <h3><%= link.url %></h2>
+  <h4><%= link.votes %></h4>
+  <%= link_to 'Upvote', upvote_path(link) %>
+  <%= link_to 'Downvote', downvote_path(link) %>
   <%= link_to 'Show link', link_path(link) %>
   <%= link_to 'Edit link', edit_link_path(link) %>
   <%= link_to 'Delete link', link, method: :delete %>
 <% end %>
+</div>
