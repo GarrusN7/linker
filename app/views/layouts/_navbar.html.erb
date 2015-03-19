@@ -16,7 +16,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Links', links_path %></li>
-        <li><%= link_to 'About', links_about_path %></li>
         <!-- We have an if statement here to only show the Users index link if users are signed in -->
         <% if user_signed_in? %>
           <li><%= link_to 'Users', users_path %></li>
